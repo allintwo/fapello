@@ -1,0 +1,145 @@
+// https://fapello.com/ajax/videos/page-3/
+group-4
+
+				<div class="mt-6 grid lg:grid-cols-3 grid-cols-2 gap-3 hover:text-yellow-700 uk-link-reset">
+
+					<div>
+						<div class="bg-yellow-400 max-w-full lg:h-60 h-48 rounded-lg relative overflow-hidden shadow uk-transition-toggle">
+							<a href="https://fapello.com/nataliehanby/9/">
+								<img src="https://fapello.com/content/n/a/nataliehanby/1000/nataliehanby_0009_300px.jpg"	class="w-full h-full absolute object-cover inset-0">
+							</a>
+
+
+							<a href="https://fapello.com/nataliehanby/9/" class="absolute flex h-full items-center justify-center w-8 w-full  bg-black bg-opacity-10">
+								<img src="https://fapello.com/assets/images/icon-play.svg" alt="" class="w-16 h-16 -mt-5">
+							</a>
+
+							<div class="flex flex-1 items-center absolute bottom-0 w-full p-3 text-white custom-overly1">
+								<a href="https://fapello.com/nataliehanby/9/" class="lg:flex flex-1 items-center">
+									<div class="p-1 rounded-full transform -rotate-2 hover:rotate-3 transition hover:scale-105 m-0.5 mr-2">
+										<img src="https://fapello.com/assets/images/avatar.jpg" class="bg-gray-200 border border-white rounded-full w-8">
+									</div>
+									<div> NatalieHanby </div>
+								</a>
+
+							</div>
+
+						</div>
+					</div>
+					<div>
+						<div class="bg-yellow-400 max-w-full lg:h-72 h-48 rounded-lg relative overflow-hidden shadow uk-transition-toggle">
+							<a href="https://fapello.com/kim-kardashian/223/">
+								<img src="https://fapello.com/content/k/i/kim-kardashian/1000/kim-kardashian_0223_300px.jpg"	class="w-full h-full absolute object-cover inset-0">
+							</a>
+
+
+							<a href="https://fapello.com/kim-kardashian/223/" class="absolute flex h-full items-center justify-center w-8 w-full  bg-black bg-opacity-10">
+								<img src="https://fapello.com/assets/images/icon-play.svg" alt="" class="w-16 h-16 -mt-5">
+							</a>
+
+							<div class="flex flex-1 items-center absolute bottom-0 w-full p-3 text-white custom-overly1">
+								<a href="https://fapello.com/kim-kardashian/223/" class="lg:flex flex-1 items-center">
+									<div class="p-1 rounded-full transform -rotate-2 hover:rotate-3 transition hover:scale-105 m-0.5 mr-2">
+										<img src="https://fapello.com/content/k/i/kim-kardashian/1000/kim-kardashian_0007.jpg" class="bg-gray-200 border border-white rounded-full w-8">
+									</div>
+									<div> Kim Kardashian </div>
+								</a>
+
+							</div>
+
+						</div>
+					</div>
+					<div>
+						<div class="bg-yellow-400 max-w-full lg:h-60 h-48 rounded-lg relative overflow-hidden shadow uk-transition-toggle">
+							<a href="https://fapello.com/bhad-bhabie/791/">
+								<img src="https://fapello.com/content/b/h/bhad-bhabie/1000/bhad-bhabie_0791_300px.jpg"	class="w-full h-full absolute object-cover inset-0">
+							</a>
+
+
+							<a href="https://fapello.com/bhad-bhabie/791/" class="absolute flex h-full items-center justify-center w-8 w-full  bg-black bg-opacity-10">
+								<img src="https://fapello.com/assets/images/icon-play.svg" alt="" class="w-16 h-16 -mt-5">
+							</a>
+
+							<div class="flex flex-1 items-center absolute bottom-0 w-full p-3 text-white custom-overly1">
+								<a href="https://fapello.com/bhad-bhabie/791/" class="lg:flex flex-1 items-center">
+									<div class="p-1 rounded-full transform -rotate-2 hover:rotate-3 transition hover:scale-105 m-0.5 mr-2">
+										<img src="https://fapello.com/content/b/h/bhad-bhabie/1000/bhad-bhabie_0099.jpg" class="bg-gray-200 border border-white rounded-full w-8">
+									</div>
+									<div> Bhad Bhabie </div>
+								</a>
+
+							</div>
+
+						</div>
+					</div>
+					<div>
+						<div class="bg-yellow-400 max-w-full lg:h-72 h-48 lg:-mt-12 rounded-lg relative overflow-hidden shadow uk-transition-toggle">
+							<a href="https://fapello.com/phoebe-harris/13/">
+								<img src="https://fapello.com/content/p/h/phoebe-harris/1000/phoebe-harris_0013_300px.jpg"	class="w-full h-full absolute object-cover inset-0">
+							</a>
+
+
+							<a href="https://fapello.com/phoebe-harris/13/" class="absolute flex h-full items-center justify-center w-8 w-full  bg-black bg-opacity-10">
+								<img src="https://fapello.com/assets/images/icon-play.svg" alt="" class="w-16 h-16 -mt-5">
+							</a>
+
+							<div class="flex flex-1 items-center absolute bottom-0 w-full p-3 text-white custom-overly1">
+								<a href="https://fapello.com/phoebe-harris/13/" class="lg:flex flex-1 items-center">
+									<div class="p-1 rounded-full transform -rotate-2 hover:rotate-3 transition hover:scale-105 m-0.5 mr-2">
+										<img src="https://fapello.com/content/p/h/phoebe-harris/1000/phoebe-harris_0010.jpg" class="bg-gray-200 border border-white rounded-full w-8">
+									</div>
+									<div> Phoebe Harris </div>
+								</a>
+
+							</div>
+
+						</div>
+					</div>
+					<div>
+						<div class="bg-yellow-400 max-w-full lg:h-60 h-48 rounded-lg relative overflow-hidden shadow uk-transition-toggle">
+							<a href="https://fapello.com/sarah-manzoni/5/">
+								<img src="https://fapello.com/content/s/a/sarah-manzoni/1000/sarah-manzoni_0005_300px.jpg"	class="w-full h-full absolute object-cover inset-0">
+							</a>
+
+
+							<a href="https://fapello.com/sarah-manzoni/5/" class="absolute flex h-full items-center justify-center w-8 w-full  bg-black bg-opacity-10">
+								<img src="https://fapello.com/assets/images/icon-play.svg" alt="" class="w-16 h-16 -mt-5">
+							</a>
+
+							<div class="flex flex-1 items-center absolute bottom-0 w-full p-3 text-white custom-overly1">
+								<a href="https://fapello.com/sarah-manzoni/5/" class="lg:flex flex-1 items-center">
+									<div class="p-1 rounded-full transform -rotate-2 hover:rotate-3 transition hover:scale-105 m-0.5 mr-2">
+										<img src="https://fapello.com/content/s/a/sarah-manzoni/1000/sarah-manzoni_0012.jpg" class="bg-gray-200 border border-white rounded-full w-8">
+									</div>
+									<div> Sarah Manzoni </div>
+								</a>
+
+							</div>
+
+						</div>
+					</div>
+					<div>
+						<div class="bg-yellow-400 max-w-full lg:h-72 h-48 lg:-mt-12 rounded-lg relative overflow-hidden shadow uk-transition-toggle">
+							<a href="https://fapello.com/danielle-vedovelli/71/">
+								<img src="https://fapello.com/content/d/a/danielle-vedovelli/1000/danielle-vedovelli_0071_300px.jpg"	class="w-full h-full absolute object-cover inset-0">
+							</a>
+
+
+							<a href="https://fapello.com/danielle-vedovelli/71/" class="absolute flex h-full items-center justify-center w-8 w-full  bg-black bg-opacity-10">
+								<img src="https://fapello.com/assets/images/icon-play.svg" alt="" class="w-16 h-16 -mt-5">
+							</a>
+
+							<div class="flex flex-1 items-center absolute bottom-0 w-full p-3 text-white custom-overly1">
+								<a href="https://fapello.com/danielle-vedovelli/71/" class="lg:flex flex-1 items-center">
+									<div class="p-1 rounded-full transform -rotate-2 hover:rotate-3 transition hover:scale-105 m-0.5 mr-2">
+										<img src="https://fapello.com/content/d/a/danielle-vedovelli/1000/danielle-vedovelli_0076.jpg" class="bg-gray-200 border border-white rounded-full w-8">
+									</div>
+									<div> Danielle Vedovelli </div>
+								</a>
+
+							</div>
+
+						</div>
+					</div>
+
+				</div>

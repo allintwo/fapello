@@ -1,0 +1,114 @@
+// https://fapello.com/ajax/top-followers/page-2/
+
+<div class="mt-6 grid lg:grid-cols-3 grid-cols-2 gap-3 hover:text-yellow-700 uk-link-reset">
+
+					<div>
+						<div class="bg-yellow-400 max-w-full lg:h-60 h-48 rounded-lg relative overflow-hidden shadow uk-transition-toggle">
+							<a href="https://fapello.com/bella-thorne/">
+								<img src="https://fapello.com/content/b/e/bella-thorne/2000/bella-thorne_1079_300px.jpg"	class="w-full h-full absolute object-cover inset-0">
+							</a>
+
+							<div class="flex flex-1 items-center absolute bottom-0 w-full p-3 text-white custom-overly1">
+								<a href="https://fapello.com/bella-thorne/" class="lg:flex flex-1 items-center">
+									<div class="p-1 rounded-full transform -rotate-2 hover:rotate-3 transition hover:scale-105 m-0.5 mr-2">
+										<img src="https://fapello.com/content/b/e/bella-thorne/1000/bella-thorne_0113.jpg" class="bg-gray-200 border border-white rounded-full w-8">
+									</div>
+									<div> Bella Thorne </div>
+								</a>
+
+							</div>
+
+						</div>
+					</div>
+					<div>
+						<div class="bg-yellow-400 max-w-full lg:h-72 h-48 rounded-lg relative overflow-hidden shadow uk-transition-toggle">
+							<a href="https://fapello.com/mathilde-tantot/">
+								<img src="https://fapello.com/content/m/a/mathilde-tantot/1000/mathilde-tantot_0104_300px.jpg"	class="w-full h-full absolute object-cover inset-0">
+							</a>
+
+							<div class="flex flex-1 items-center absolute bottom-0 w-full p-3 text-white custom-overly1">
+								<a href="https://fapello.com/mathilde-tantot/" class="lg:flex flex-1 items-center">
+									<div class="p-1 rounded-full transform -rotate-2 hover:rotate-3 transition hover:scale-105 m-0.5 mr-2">
+										<img src="https://fapello.com/content/m/a/mathilde-tantot/1000/mathilde-tantot_0007.jpg" class="bg-gray-200 border border-white rounded-full w-8">
+									</div>
+									<div> Mathilde Tantot </div>
+								</a>
+
+							</div>
+
+						</div>
+					</div>
+					<div>
+						<div class="bg-yellow-400 max-w-full lg:h-60 h-48 rounded-lg relative overflow-hidden shadow uk-transition-toggle">
+							<a href="https://fapello.com/pauline-tantot/">
+								<img src="https://fapello.com/content/p/a/pauline-tantot/1000/pauline-tantot_0282_300px.jpg"	class="w-full h-full absolute object-cover inset-0">
+							</a>
+
+							<div class="flex flex-1 items-center absolute bottom-0 w-full p-3 text-white custom-overly1">
+								<a href="https://fapello.com/pauline-tantot/" class="lg:flex flex-1 items-center">
+									<div class="p-1 rounded-full transform -rotate-2 hover:rotate-3 transition hover:scale-105 m-0.5 mr-2">
+										<img src="https://fapello.com/content/p/a/pauline-tantot/1000/pauline-tantot_0020.jpg" class="bg-gray-200 border border-white rounded-full w-8">
+									</div>
+									<div> Pauline Tantot </div>
+								</a>
+
+							</div>
+
+						</div>
+					</div>
+					<div>
+						<div class="bg-yellow-400 max-w-full lg:h-72 h-48 lg:-mt-12 rounded-lg relative overflow-hidden shadow uk-transition-toggle">
+							<a href="https://fapello.com/selti/">
+								<img src="https://fapello.com/content/s/e/selti/1000/selti_0431_300px.jpg"	class="w-full h-full absolute object-cover inset-0">
+							</a>
+
+							<div class="flex flex-1 items-center absolute bottom-0 w-full p-3 text-white custom-overly1">
+								<a href="https://fapello.com/selti/" class="lg:flex flex-1 items-center">
+									<div class="p-1 rounded-full transform -rotate-2 hover:rotate-3 transition hover:scale-105 m-0.5 mr-2">
+										<img src="https://fapello.com/content/s/e/selti/1000/selti_0047.jpg" class="bg-gray-200 border border-white rounded-full w-8">
+									</div>
+									<div> Selti </div>
+								</a>
+
+							</div>
+
+						</div>
+					</div>
+					<div>
+						<div class="bg-yellow-400 max-w-full lg:h-60 h-48 rounded-lg relative overflow-hidden shadow uk-transition-toggle">
+							<a href="https://fapello.com/mady-gio/">
+								<img src="https://fapello.com/content/m/a/mady-gio/1000/mady-gio_0823_300px.jpg"	class="w-full h-full absolute object-cover inset-0">
+							</a>
+
+							<div class="flex flex-1 items-center absolute bottom-0 w-full p-3 text-white custom-overly1">
+								<a href="https://fapello.com/mady-gio/" class="lg:flex flex-1 items-center">
+									<div class="p-1 rounded-full transform -rotate-2 hover:rotate-3 transition hover:scale-105 m-0.5 mr-2">
+										<img src="https://fapello.com/content/m/a/mady-gio/1000/mady-gio_0110.jpg" class="bg-gray-200 border border-white rounded-full w-8">
+									</div>
+									<div> Mady_gio </div>
+								</a>
+
+							</div>
+
+						</div>
+					</div>
+					<div>
+						<div class="bg-yellow-400 max-w-full lg:h-72 h-48 lg:-mt-12 rounded-lg relative overflow-hidden shadow uk-transition-toggle">
+							<a href="https://fapello.com/mackenzie-jones/">
+								<img src="https://fapello.com/content/m/a/mackenzie-jones/1000/mackenzie-jones_0272_300px.jpg"	class="w-full h-full absolute object-cover inset-0">
+							</a>
+
+							<div class="flex flex-1 items-center absolute bottom-0 w-full p-3 text-white custom-overly1">
+								<a href="https://fapello.com/mackenzie-jones/" class="lg:flex flex-1 items-center">
+									<div class="p-1 rounded-full transform -rotate-2 hover:rotate-3 transition hover:scale-105 m-0.5 mr-2">
+										<img src="https://fapello.com/content/m/a/mackenzie-jones/1000/mackenzie-jones_0113.jpg" class="bg-gray-200 border border-white rounded-full w-8">
+									</div>
+									<div> Mackenzie Jones </div>
+								</a>
+
+							</div>
+
+						</div>
+					</div>
+
+				</div>

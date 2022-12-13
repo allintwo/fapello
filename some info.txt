@@ -1,0 +1,32 @@
+
+
+$locations_query = new WP_Query( array(
+  'post_type' => 'post',
+  'posts_per_page' => 10,
+  'tax_query' => array(
+    array(
+      'taxonomy' => 'location',
+      'field' => 'slug',
+      'terms' => 'boston'
+    )
+  )
+) );
+
+$locations_query->have_posts() ):
+
+
+
+
+$locations_list = wp_list_categories( array(
+    'taxonomy' => 'Model',
+    'orderby' => 'name',
+    'show_count' => 0,
+    'pad_counts' => 0,
+    'hierarchical' => 1,
+    'echo' => 0,
+    'title_li' => 'Locations'
+) );
+
+// Make sure there are terms with articles
+if ( $locations_list )
+    echo '<ul class="locations-list">' . $locations_list . '</ul>';

@@ -1,0 +1,112 @@
+
+</div>
+
+</div>
+
+<script>
+
+    var block_show = false;
+
+    function scrollMore(){
+        var $target = $('#showmore');
+
+        if (block_show) {
+            return false;
+        }
+
+        var wt = $(window).scrollTop();
+        var wh = $(window).height();
+        var et = $target.offset().top;
+        var eh = $target.outerHeight();
+        var dh = $(document).height();
+
+        if (wt + wh >= et || wh + wt == dh || eh + et < wh)
+        {
+            var page = $target.attr('data-page');
+            page++;
+            block_show = true;
+
+            $.ajax({
+                url: '/ajax/index/page-' + page + '/',
+                dataType: 'html',
+                success: function(data){
+
+                    var div_showmore = $('#showmore').detach();
+                    var div_next_page = $('#next_page').detach();
+
+                    $('#content').append(data);
+                    block_show = false;
+
+                    if (data.length>50)
+                    {
+                        div_showmore.appendTo('#content');
+                        div_next_page.appendTo('#content');
+                    }
+                }
+            });
+
+
+            $target.attr('data-page', page);
+            if (page ==  $target.attr('data-max')) {
+                $target.remove();
+                div_showmore.remove();
+                div_next_page.remove();
+            }
+
+
+        }
+    }
+
+    $(window).scroll(function() {
+        scrollMore();
+    });
+
+    $(document).ready(function() {
+        scrollMore();
+    });
+
+
+    jQuery(document).on('click','.like_button',function () {
+
+
+        var like_id = $(this).attr('feed_id');
+
+        $.ajax({
+            url: '/ajax/like/feed/' + like_id + '/',
+            dataType: 'html',
+            success: function(data){
+                like_data = JSON.parse(data);
+
+
+                $( '#like_' + like_id ).html(like_data.like);
+                $( '#last_likes_' + like_id ).html(like_data.last_likes);
+                $( '#count_likes_' + like_id ).html(like_data.count_likes);
+
+            }
+        });
+    });
+
+
+    jQuery(document).on('click','.follow_button',function () {
+
+        var model_id = $(this).attr('model_id');
+
+        $.ajax({
+            url: '/ajax/follow/model/' + model_id + '/',
+            dataType: 'html',
+            success: function(data){
+                follow_data = JSON.parse(data);
+
+
+                $( '#follow_' + model_id ).text(follow_data.text);
+            }
+        });
+
+    });
+
+</script>
+
+
+</body>
+
+</html>

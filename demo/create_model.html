@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Create Model</title>
+</head>
+<body>
+<h1>We are creating model for you !</h1>
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+-->
+
+<script>
+
+    if(1)
+    {
+        function disenable_elem(id)
+        {
+            var eleman = document.getElementById(id);
+            eleman.setAttribute("disabled", false);
+            eleman.setAttribute("editable", false);
+        }
+
+        disenable_elem('tag-description');
+        var tm_raw_content = document.getElementById('tag-description').value;
+
+        // create - just create
+        // eidt - load - load to elem ||
+
+
+        function getset_new_desc(get =1,tmydata = null)
+        {
+
+            tmydata.id = '';
+            tmydata.name = '';
+            tmydata.url = '';
+            tmydata.age = '';
+            tmydata.image = '';
+            tmydata.ttl_followers = '';
+            tmydata.ttl_likes = '';
+            tmydata.ttl_views = '';
+            tmydata.ttl_comments = '';
+            tmydata.twitter = '';
+            tmydata.onlyfans = '';
+            tmydata.instagram = '';
+            tmydata.about = '';
+            tmydata.post_id = '';
+            tmydata.model_id = '';
+            tmydata.model_name = '';
+
+
+            var model_data = null;
+            var tmodel_name = '';
+            var tmodel_id = 0;
+            var tmodel_image = '';
+            var tmodel_description = '';
+            var tmodel_twitter = '';
+            var tmodel_instagram = '';
+            var tmodel_onlyfans = '';
+
+            var emodel_data = null;
+
+            var etmodel_id = document.getElementById('model_id');
+            var etmodel_name = document.getElementById('model_name');
+            var etmodel_image = document.getElementById('model_image');
+            var etmodel_description = document.getElementById('model_description');
+            var etmodel_twitter = document.getElementById('twitter');
+            var etmodel_instagram = document.getElementById('instagram');
+            var etmodel_onlyfans = document.getElementById('onlyfans');
+
+
+
+            if(value.length >5)
+            {
+                var jsdata = JSON.parse(value);
+
+            }
+
+        }
+
+    }
+
+
+
+</script>
+
+
+
+<div class="container">
+    <form action="" class="form" method="post">
+        <div class="form-group row">
+            <label for="model_id" class="col-4 col-form-label">ID</label>
+            <div class="col-8">
+                <input id="model_id" name="model_id" placeholder="Model_id" type="text" class="form-control">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="model_name" class="col-4 col-form-label">Model_name</label>
+            <div class="col-8">
+                <input id="model_name" name="model_name" placeholder="Display name" type="text" class="form-control">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="model_image" class="col-4 col-form-label">Image</label>
+            <div class="col-8">
+                <input id="model_image" name="model_image" placeholder="Upload/select Image" type="text" class="form-control">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="model_description" class="col-4 col-form-label">Description</label>
+            <div class="col-8">
+                <textarea id="model_description" name="model_description" cols="40" rows="5" class="form-control"></textarea>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="twitter" class="col-4 col-form-label">Twitter url</label>
+            <div class="col-8">
+                <input id="twitter" name="twitter" placeholder="https://" type="text" class="form-control">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="instagram" class="col-4 col-form-label">Instagram</label>
+            <div class="col-8">
+                <input id="instagram" name="instagram" placeholder="https://" type="text" class="form-control">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="onlyfans" class="col-4 col-form-label">Onlyfans</label>
+            <div class="col-8">
+                <input id="onlyfans" name="onlyfans" placeholder="https://" type="text" class="form-control">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="offset-4 col-8">
+                <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
