@@ -725,6 +725,23 @@ dflkhfdskljfhdsfgdsifdsfhdsffdsoiuf;
         $this->wpdb->query("UPDATE `fape_model` SET `$key`='$value' WHERE id = '{$model_id}'");
     }
 
+    function xzy_fix_image_url($link)
+    {
+
+        $slash_count = substr_count($link,'/');
+
+        if($slash_count == 7)
+        {
+            $flnme = basename($link);
+            $dirnm1 = dirname($link);
+            $slug = basename($dirnm1);
+            $dirnm2 = dirname($dirnm1);
+            $newindexlink = $dirnm2 .'/'.$slug[0].'/'.$slug.'/'.$flnme;
+            return $newindexlink;
+        }
+        return  $link;
+
+    }
     function a_get_model_profile_by_term_data($termdata,$js_strx = '',$show_content_id=  1)
     {
 
@@ -778,7 +795,7 @@ dflkhfdskljfhdsfgdsifdsfhdsffdsoiuf;
             $fapello_model->db_to_model((array)$model_data);
             if(isset($model_data->image))
             {
-                $model_picture = $model_data->image;
+                $model_picture = $this->xzy_fix_image_url($model_data->image);
             }else{
 
                 if($model_data->post_id)

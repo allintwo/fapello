@@ -60,7 +60,7 @@ if(1)
     $model_data = $fapello_ajax->get_model_data_by_post_id($the_id);
     if(isset($model_data->image))
     {
-        $img = $model_data->image;
+        $img = $fapello_ajax->xzy_fix_image_url( $model_data->image);
         $fimage = $img;
 
         $imgs[0] = $img;

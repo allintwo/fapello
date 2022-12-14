@@ -182,9 +182,10 @@ function built_in_fapello_scraper($url)
     }else{
         mkdir($mod_dir,0777,1);
     }
-
-    $u_basedir = $upload_dir['basedir'].'/models/'.$slug .'/';
-    $u_baseurl = $upload_dir['baseurl'].'/models/'.$slug .'/';
+// index system added
+    $index_str = $slug[0];
+    $u_basedir = $upload_dir['basedir'].'/models/'.$index_str .'/'.$slug .'/';
+    $u_baseurl = $upload_dir['baseurl'].'/models/'.$index_str .'/'.$slug .'/';
 
     $cc->GetPageData($url);
 
