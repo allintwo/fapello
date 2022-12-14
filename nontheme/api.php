@@ -5,6 +5,13 @@
  * Date: 12/13/2022
  * Time: 2:59 PM
  */
+$response_type = 'json';
+$response_text = '';
+if(isset($_REQUEST['response_type']))
+{
+    $response_type = $_REQUEST['response_type'];
+}
+$start_time = time();
 $response = [];
 $response['status'] = 400;
 $response['data'] = '';
@@ -78,10 +85,75 @@ if($action =='exportallurls')
     exit();
 }
 
+
+
+
+
 if($action =='bgindexing')
 {
- $urls = $fnt->ajax_get_some_urls(7);
 
+
+    // work by time system
+    $t_ttm = time();
+    $t_mx_tm = 62;
+    ini_set('max_execution_time',$t_mx_tm + 10);// second
+    $t_mx_tm = $t_mx_tm - 5;
+
+    $keeploop = 1;
+    while ($keeploop)
+    {
+        $t_enttm = time();
+        $t_difftm = time() - $t_ttm;
+        if($t_mx_tm < $t_difftm)
+        {
+            $keeploop = 0;
+        }
+
+        $urls = $fnt->ajax_get_some_urls(3); // 7
+        $response['urls'] = $urls;
+        foreach ($urls as $url)
+        {
+            $response['logs'][] = $url."--Indexed";
+            $newfnt = new fapello_nontheme($mysqli);
+            $slug = basename($url);
+            $newfnt->get_index_data_by_url_slug($slug);
+
+            $t_enttm = time();
+            $t_difftm = time() - $t_ttm;
+            if($t_mx_tm < $t_difftm)
+            {
+
+                $keeploop = 0;
+                break;
+            }
+        }
+        $t_enttm = time();
+        $t_difftm = time() - $t_ttm;
+        if($t_mx_tm < $t_difftm)
+        {
+            $keeploop = 0;
+        }
+    }
+
+/*
+    $max_file_index = 8;
+    if(isset($_REQUEST['limit']))
+    {
+        $max_file_index = $_REQUEST['limit'];
+    }
+    for($i = 0;$i<$max_file_index;$i++)
+    {
+        $urls = $fnt->ajax_get_some_urls(1); // 7
+        $response['urls'] = $urls;
+        foreach ($urls as $url)
+        {
+            $response['logs'][] = $url."--Indexed";
+            $newfnt = new fapello_nontheme($mysqli);
+            $slug = basename($url);
+            $newfnt->get_index_data_by_url_slug($slug);
+        }
+    }
+    */
 }
 
 if($action =='fastindex')
@@ -98,44 +170,39 @@ if($action =='fastindex')
     }
 
     $slug = basename($url);
-
-    $cache_data = $fnt->find_fastindex_data($slug);
-    if(isset($cache_data['data']))
-    {
-        $dbdatas = json_decode($cache_data['data'],1);
-        $response['data']  =$dbdatas;
-        $response['response_type'] = 'cached';
-
-    }else{
-        $cw = new common_fapello_xworker();
-        $cw->GetPageData($url);
-        $dbdatas = $cw->get_json_data();
-        $response['data']  =$dbdatas;
-        $fnt->save_fastindex_data($slug,$dbdatas);
-        $u_basedir = $_SERVER['DOCUMENT_ROOT'].'/wp-content/uploads/models/'.$slug .'/';
-        $u_baseurl = 'https://ilovnudes.com/wp-content/uploads/models/'.$slug .'/';
-        $data = $cw->build_wp_post_output($u_baseurl,$u_basedir);
-        $response['response_type'] = 'live';
-        }
-
-
+    $fnt->get_index_data_by_url_slug($slug);
    // print_r($dbdatas);
-
-
-
     $response['url'] = $url;
     $response['slug'] = $slug;
     $response['process'] = 'done';
 }
-
-
+if($action =='get_indexed_urls')
+{
+    $limit = 50;
+    if(isset($_REQUEST['limit']))
+    {
+        $limit = $_REQUEST['limit'];
+    }
+    $urls =  $fnt->ajax_get_indexed_urls($limit);
+    if($response_type =='text')
+    {
+        echo implode(PHP_EOL,$urls);exit();
+    }
+    $response['urls'] = $urls;
+}
 
 $ytime = time();
 
 $response['time_take'] =  $ytime - $xtime;
 $response['time'] = $xtime;
 
+$end_time = time();
+$total_time = $end_time - $start_time;
 header("Content-Type: application/json");
+
+$response['start_time'] = $start_time;
+$response['end_time'] = $end_time;
+$response['total_sec'] = $total_time;
 echo json_encode($response);
 
 

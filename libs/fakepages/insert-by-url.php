@@ -48,7 +48,7 @@ function r_write_update_line($newarray)
     file_put_contents('urllist.txt', implode(PHP_EOL, $newarray));
 }
 
-
+/*
 if(isset($_REQUEST['cron_text_upload']))
 {
     ini_set('default_charset', 'UTF-8');
@@ -106,6 +106,7 @@ if(isset($_REQUEST['cron_text_upload']))
     echo "<li style='background-color: red'>---ALL Complete --- </li>";
 
 }
+*/
 
 if(isset($_REQUEST['url']))
 {
@@ -187,7 +188,8 @@ function built_in_fapello_scraper($url)
     $u_basedir = $upload_dir['basedir'].'/models/'.$index_str .'/'.$slug .'/';
     $u_baseurl = $upload_dir['baseurl'].'/models/'.$index_str .'/'.$slug .'/';
 
-    $cc->GetPageData($url);
+     // $cc->GetPageData($url);
+    $cc->api_get_cache_data($url);
 
     $data =$cc->build_wp_post_output($u_baseurl,$u_basedir);
 

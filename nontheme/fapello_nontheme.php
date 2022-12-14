@@ -108,19 +108,50 @@ $i = 0;
     function update_urls_time($id)
     {
         $time = time();
-        $this->mysqli->query("UPDATE `all_urls` SET `time`='{$time}' WHERE id = '{$id}'");
+      //  $this->mysqli->query("UPDATE `all_urls` SET `time`='{$time}' WHERE id = '{$id}'");
+        $this->mysqli->query("UPDATE `all_urls` SET `time`='{$time}',`status`='1' WHERE id = '{$id}'");
     }
     function ajax_get_some_urls($limit =50)
     {
+
         $urls = [];
-        $query = $this->mysqli->query("select * from all_urls order by time asc limit $limit");
+        $query_text = '';
+        if(rand(0,2))
+        {
+            $query = $this->mysqli->query("select * from all_urls where status = '0' order by time asc limit $limit");
+        }else{
+            $query = $this->mysqli->query("select * from all_urls where status = '0' ORDER BY rand() LIMIT $limit");
+        }
+       // $query = $this->mysqli->query("SELECT * FROM `all_urls` order by status asc limit $limit");
+
         while ($row = mysqli_fetch_assoc($query))
         {
             $urls[] = $row['url'];
             $this->update_urls_time($row['id']);
+
         }
         return $urls;
     }
+
+    function update_fast_index_time($id)
+    {
+        $time = time();
+        $this->mysqli->query("UPDATE `fastindex` SET `utime`='{$time}' WHERE id = '{$id}'");
+    }
+    function ajax_get_indexed_urls($limit =50)
+    {
+
+        $urls = [];
+        $query = $this->mysqli->query("select * from fastindex order by utime asc limit $limit");
+        while ($row = mysqli_fetch_assoc($query))
+        {
+            $urls[] = "https://fapello.com/". $row['slug'] .'/';
+
+            $this->update_fast_index_time($row['id']);
+        }
+        return $urls;
+    }
+
     function export_all_urls()
     {
         $urls = [];
@@ -146,6 +177,42 @@ $i = 0;
         }
         return  [];
     }
+
+
+    function get_index_data_by_url_slug($slug)
+    {
+        global $response;
+        $url = "https://fapello.com/{$slug}/";
+       // $slug = basename($url);
+        $cache_data = $this->find_fastindex_data($slug);
+        if(isset($cache_data['data']))
+        {
+            $dbdatas = json_decode($cache_data['data'],1);
+            if(isset($dbdatas['images'][0]))
+            {
+                $response['data']  =$dbdatas;
+            }
+
+            $response['response_type'] = 'cached';
+
+        }else{
+            $cw = new common_fapello_xworker();
+            $cw->GetPageData($url);
+            $dbdatas = $cw->get_json_data();
+            $this->save_fastindex_data($slug,$dbdatas);
+            if(isset($dbdatas['images']))
+            {
+                $response['data']  =$dbdatas;
+                $u_basedir = $_SERVER['DOCUMENT_ROOT'].'/wp-content/uploads/models/'.$slug[0].'/'.$slug .'/';
+                $u_baseurl = 'https://ilovnudes.com/wp-content/uploads/models/'.$slug[0].'/'.$slug .'/';
+                $cw->build_wp_post_output($u_baseurl,$u_basedir);
+            }
+
+
+            $response['response_type'] = 'live';
+        }
+    }
+
 
     function save_fastindex_data($slug,$data)
     {

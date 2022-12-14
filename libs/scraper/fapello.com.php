@@ -20,6 +20,35 @@ class common_fapello_xworker{
     public $videos = [];
 
 
+    function api_get_cache_data($url,$api_host = 'https://ilovnudes.com/nontheme/api.php')
+    {
+        $slug = basename($url);
+        $req_url = $api_host.'?action=fastindex&url='.$url;
+        $response_d = $this->func_get_content($req_url);
+        $jsd = @json_decode($response_d,1);
+        if(isset($jsd['data']['slug']))
+        {
+            $this->json_data_to_this_rebuild($jsd['data']);
+        }
+    }
+
+    function json_data_to_this_rebuild($app)
+    {
+        $this->Weburl=$app['Weburl'];
+        $this->Title=$app['Title'];
+        $this->basedir=$app['basedir'];
+        $this->baseurl=$app['baseurl'];
+        $this->fimage=$app['fimage'];
+        $this->name=$app['name'];
+        $this->slug=$app['slug'];
+        $this->twitter=$app['twitter'];
+        $this->instagram=$app['instagram'];
+        $this->onlyfans=$app['onlyfans'];
+        $this->patreon=$app['patreon'];
+        $this->images=$app['images'];
+        $this->videos=$app['videos'];
+    }
+
     function build_wp_post_output($baseurl,$basedir)
     {
         $this->basedir = $basedir;

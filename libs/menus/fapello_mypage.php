@@ -33,7 +33,7 @@ class fapello_mypage{
         $html_container = <<<lkjjhgsdkufgsdiufugsduioyfgds
 <div id="dashboard_site_health" class="postbox" style="">
 <div class="postbox-header">
-<h2 class="hndle ui-sortable-handle">Insert by Url</h2>
+<h2 class="hndle ui-sortable-handle">Insert by Url <span class="input-group"><input style="text-align: center;width: 100px" class="form-control" id="linklimit" type="text" value="50"><span class="input-group-append"><button id="generatebttn" class="form-control button button-primary" type="button">Get LInks</button></span> </span> </h2>
 </div>
 <div class="inside">
 	<div class="health-check-widget">
@@ -91,6 +91,31 @@ $theme_dir = get_template_directory_uri();
 	
 </div>
 </div>
+<script>
+function get_links_fapi()
+{
+    var btngeneratebttn = document.getElementById('generatebttn');
+    var inptbxlimit = document.getElementById('linklimit');
+    
+    btngeneratebttn.addEventListener('click',function (){
+      // alert('you click');
+       let xlimmmt = inptbxlimit.value;
+       $.ajax({
+        url: "https://ilovnudes.com/nontheme/api.php?action=get_indexed_urls&response_type=text&limit="+xlimmmt,
+        type: 'GET',
+       // dataType: 'json', // added data type
+        success: function(res) {
+           // console.log(res);
+           $('textarea#urlgatterid').val(res);
+        }
+    });
+       
+    });
+}
+get_links_fapi();
+</script>
+
+
 
 <script>
 var total_reqs = 0;
